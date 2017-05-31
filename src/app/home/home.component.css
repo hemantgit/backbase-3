@@ -1,0 +1,57 @@
+/* Component CSS settings */
+
+.thumbnail {
+  text-align: center;
+}
+
+.center {
+  padding-left: auto;
+  padding-right: auto;
+  display: block;
+  width: 100%;
+}
+
+.chart {
+  background: #fff;
+  display: block;
+  width: 200px;
+  height: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.jumbotron {
+  background: #fff;
+}
+
+.thumbnail {
+  border: 0;
+}
+
+.day {
+  background: #00B4CC;
+  color: #fff;
+}
+
+.night {
+  background: #005F6B;
+  color: #fff;
+}
+
+div.ext-box { 
+  display: table; 
+  width:100%;
+}
+
+div.int-box { 
+  display: table-cell; 
+  vertical-align: middle; 
+}
+
+/** For small resolutions */
+@media screen and (max-width: 768px) { 
+  .chart {
+    margin-top: 30%;
+  }
+}

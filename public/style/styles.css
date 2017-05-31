@@ -1,0 +1,49 @@
+/* General CSS settings */
+
+body, html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #FFFFFF;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 5%;
+}
+
+.navbar {
+  background: #343838;
+  border-color: #343838;
+}
+
+.navbar-brand, .dropdown-toggle {
+  color: #fff !important;
+}
+
+li.active > a{
+  background: yellow;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 5%;
+  color: #C0C0C0;
+  font-size: 11px;
+}
+
+/** For small resolutions */
+@media screen and (max-width: 768px) { 
+  .footer {
+    display: none;
+  }
+}

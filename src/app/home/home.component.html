@@ -1,0 +1,27 @@
+<div class="jumbotron">
+  <div class="container">
+	<div class="row">
+	  <div class="col-sm-6 col-md-4 center">
+	    <div class="thumbnail">
+	      <div class="chart" ng-class="{'day': icons.indexOf(data.iconWeather) !== -1, 'night': icons.indexOf(data.iconWeather) === -1}">
+		      <div class="ext-box">
+	    		<div class="int-box">
+	        		<h2>{{data.cityName}}</h2>
+	        		<p><img src="http://openweathermap.org/img/w/{{data.iconWeather}}.png"/></p>
+	        		<p>{{data.currentWeather}}</p>
+	    		</div>
+			  </div>
+	      </div>
+	      <div class="caption">
+	        <p>{{data.descriptionWeather | capitalize}}</p>
+	        <div class="">
+	        <p><a  class="btn btn-default" role="button">{{data.averageWeather}} &#176;C</a> <a class="btn btn-default" role="button">Wind {{data.windStrength}} km/h</a></p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+  </div>
+</div> <!-- /home container -->
+
+

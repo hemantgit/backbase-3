@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Weather Data App built using AngularJS 1.X">
+    <link rel='shortcut icon' type='image/x-icon' href='./public/img/favicon.ico' />
+    <meta name="author" content="Diego Sarmiento">
+
+    <title>Weather Data</title>
+
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.min.js"></script>
+
+    <!-- General CSS -->
+    <link href="public/style/styles.css" rel="stylesheet">
+
+    <!-- Services and/or Directives -->
+    <script src="src/app/shared/services/service.js"></script>
+
+    <!-- App JS file -->
+    <script src="src/app/app.js"></script>
+
+    <!-- Components -->
+    <script src="src/app/home/home.component.js"></script>
+    <link href="src/app/home/home.component.css" rel="stylesheet">
+  </head>
+
+  <body ng-app="APP">
+        <!-- Menu / Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Weather Data</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+             <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Select a City <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li ng-class="{'active': defaultroute == 'london/' || defaultroute == '/' }"><a href="#/london/">London</a></li>
+                  <li ng-class="{'active': defaultroute == 'paris/'}"><a href="#/paris/">Paris</a></li>
+                  <li ng-class="{'active': defaultroute == 'madrid/'}"><a href="#/madrid/">Madrid</a></li>
+                  <li ng-class="{'active': defaultroute == 'berlin/'}"><a href="#/berlin/">Berlin</a></li>
+                  <li ng-class="{'active': defaultroute == 'roma/'}"><a href="#/roma/">Roma</a></li>
+                </ul>
+              </li>
+             </ul>
+            </div>
+          </div>
+        </nav> 
+
+        <!-- Load view -->
+        <div ng-view></div>
+
+        <!-- Footer here -->
+        <footer class="footer">
+            <p>&copy; 2017 Backbase</p>
+        </footer>
+
+  </body>
+</html>
